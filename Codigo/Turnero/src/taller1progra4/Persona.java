@@ -7,14 +7,13 @@ public class Persona {
 	private String servicio;
 	private int prioridad;
 	
-	
 	public Persona(String nombre, int id, String servicio, int prioridad) {
 		
 		this.nombre = nombre;
 		this.id = id;
 		this.servicio = servicio;
 		this.prioridad = prioridad;
-		
+		       
 	}
 	public String getNombre() {
 		return nombre;
@@ -24,7 +23,7 @@ public class Persona {
 	}
 	public int getId() {
 		return id;
-	}
+	} 
 	public void setId(int id) {
 		this.id = id;
 	}
