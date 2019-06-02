@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class VentanaConversor extends JFrame implements InterfazVista<Object>{
-	//private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 	private JButton convertirApesetas;
 	private JButton convertirAeuros;
 	private JTextField cantidad;
