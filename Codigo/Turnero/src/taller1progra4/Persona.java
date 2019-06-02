@@ -15,6 +15,9 @@ public class Persona {
 		this.prioridad = prioridad;
 		       
 	}
+	public Persona(String nombre2, int id2, boolean estado, int servicio1, int servicio2, int servicio3) {
+		
+	}
 	public String getNombre() {
 		return nombre;
 	}

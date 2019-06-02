@@ -2,33 +2,46 @@ package taller1progra4;
 
 public class Turnero {
 	
-	private NodoTurnero cabezaTurno = null;
-	private NodoTurnero colaTurno = null;
-	private int tamañoTurno = 0;
+	private NodoTurnero inicio = null;
+	private NodoTurnero ultimo = null;
+	private int tamañoCola = 0;
 	
 	
 	public Turnero() {
 		
 	}
-	public NodoTurnero getCabezaTurno() {
-		return cabezaTurno;
+
+
+	public NodoTurnero getInicio() {
+		return inicio;
 	}
-	public void setCabezaTurno(NodoTurnero cabezaTurno) {
-		this.cabezaTurno = cabezaTurno;
+
+
+	public void setInicio(NodoTurnero inicio) {
+		this.inicio = inicio;
 	}
-	public NodoTurnero getColaTurno() {
-		return colaTurno;
+
+
+	public NodoTurnero getUltimo() {
+		return ultimo;
 	}
-	public void setColaTurno(NodoTurnero colaTurno) {
-		this.colaTurno = colaTurno;
+
+
+	public void setUltimo(NodoTurnero ultimo) {
+		this.ultimo = ultimo;
 	}
-	public int getTamañoTurno() {
-		return tamañoTurno;
+
+
+	public int getTamañoCola() {
+		return tamañoCola;
 	}
-	public void setTamañoTurno(int tamañoTurno) {
-		this.tamañoTurno = tamañoTurno;
+
+
+	public void setTamañoCola(int tamañoCola) {
+		this.tamañoCola = tamañoCola;
 	}
-	
+
+
 	
 	
 
