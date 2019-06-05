@@ -7,11 +7,11 @@ import modelo.ConversorEurosPesetas;
 import vistaEjemplo.InterfazVista;
 
 public class ControlConversor implements ActionListener{
-	@SuppressWarnings("rawtypes")
+	
 	private InterfazVista vista;
 	private ConversorEurosPesetas modelo;
 	
-	@SuppressWarnings("rawtypes")
+	
 	public ControlConversor (InterfazVista vista, ConversorEurosPesetas modelo) {
 		this.vista = vista;
 		this.modelo = modelo;

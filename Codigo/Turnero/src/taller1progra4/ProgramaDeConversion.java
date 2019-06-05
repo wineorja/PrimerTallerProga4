@@ -11,14 +11,14 @@ public class ProgramaDeConversion {
 		ConversorEurosPesetas modelo = new ConversorEurosPesetas();
 		
 		// la vista:
-		  InterfazVista<Object> vista = new VentanaConversor();
+		  InterfazVista vista = new VentanaConversor();
 		
 		
 		// y el control:
 		 ControlConversor control = new ControlConversor(vista, modelo);
 		 
 		 // configura la vista:
-		 vista.getControlador(control);
+		 vista.setControlador(control);
 		 
 		 // y arranca la interfaz vista:
 		 vista.arranca();

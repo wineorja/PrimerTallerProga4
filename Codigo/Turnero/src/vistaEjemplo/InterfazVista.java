@@ -1,12 +1,13 @@
 package vistaEjemplo;
 
-public interface InterfazVista<ControlConversor> {
-	void getControlador(ControlConversor c);
-	void arranca ();  //comienza la visualizacion
+import controladorEjemplo.ControlConversor;
+
+public interface InterfazVista {
+	void setControlador(ControlConversor c);
+	void arranca ();              //comienza la visualizacion
 	
-	double getCantidad(); //cantidad a convertir
+	double getCantidad();         //cantidad a convertir
 	void escribeCambio(String s); // texto con la conversion
-	//resultado.setText(s);
 	
 	// constantes que definen las posibles operaciones:
 	static final String AEUROS="Pesetas a Euros";
@@ -14,11 +15,3 @@ public interface InterfazVista<ControlConversor> {
 
 }
 
-
-
-
-
-//public void escribeCambio (String s) {
-	//resultado.setText(s);
-	
-//}

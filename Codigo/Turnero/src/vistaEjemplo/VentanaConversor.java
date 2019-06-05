@@ -2,20 +2,41 @@ package vistaEjemplo;
 
 import java.awt.BorderLayout;
 
+import java.awt.EventQueue;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import controladorEjemplo.ControlConversor;
 
-public class VentanaConversor extends JFrame implements InterfazVista<Object>{
-	private static final long serialVersionUID = 1L;
+public class VentanaConversor extends JFrame implements InterfazVista {
+
 	private JButton convertirApesetas;
 	private JButton convertirAeuros;
 	private JTextField cantidad;
 	private JLabel resultado;
-	
-	
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					VentanaConversor frame = new VentanaConversor();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+
 	public VentanaConversor() {
 		super ("Conversor de Euros yPesetas");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -40,31 +61,27 @@ public class VentanaConversor extends JFrame implements InterfazVista<Object>{
 		PanelPrincipal.add(botonera, BorderLayout.SOUTH);
 		getContentPane().add(PanelPrincipal);
 	}
-
-
-	@Override
-	public void getControlador(Object c) {
-		
-	}
-
-
-	@Override
-	public void arranca() {
-		
-	}
-
-
-	@Override
-	public double getCantidad() {
-		return 0;
-	}
-
-
-	@Override
+	
 	public void escribeCambio(String s) {
+		resultado.setText(s);
+	}
+	public double getCantidad() {
+		try {
+		     return Double.parseDouble(cantidad.getText());
+		}catch (NumberFormatException e) {
+		     return 0.0D;
+		}
+	}
+	public void setControlador(ControlConversor c) {
+		convertirApesetas.addActionListener(c);
+		convertirAeuros.addActionListener(c);
+	}
+	public void arranca() {
+		pack();// coloca los componentes
+		setLocationRelativeTo(null);// centra la ventana en la pantalla
+		setVisible(true);// visualiza la ventana
 		
-	
-}
-	
+	}
+		
 
 }
