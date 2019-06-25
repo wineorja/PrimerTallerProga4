@@ -1,4 +1,4 @@
-package taller1progra4;
+package modelo;
 
 public class NodoAsesor {
 	

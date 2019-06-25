@@ -1,4 +1,4 @@
-package taller1progra4;
+package modelo;
 
 public class Servicio {
 	
@@ -7,9 +7,35 @@ public class Servicio {
 	private String servicio1;
 	private String servicio2;
 	private String servicio3;
+	private int tamaño = 0;
 	
 	public Servicio() {
 		
+	}
+	
+	public void crearServicios(String nombre) {
+		NodoServicio nodo = new NodoServicio(nombre);
+		if(this.inicio==null) {
+			this.inicio=nodo;
+			this.ultimo=nodo;
+		}
+		else {
+			this.ultimo.setSiguiente(nodo);
+			this.ultimo=nodo;
+		}
+		System.out.println("se ha creado el sevicio " + nombre);
+		this.tamaño = this.tamaño + 1;
+		System.out.println("la lista tiene " + this.tamaño + " servicios.");
+	}
+	
+	
+
+	public int getTamaño() {
+		return tamaño;
+	}
+
+	public void setTamaño(int tamaño) {
+		this.tamaño = tamaño;
 	}
 
 	public NodoServicio getInicio() {
